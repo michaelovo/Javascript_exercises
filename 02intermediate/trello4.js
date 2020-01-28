@@ -27,7 +27,32 @@ const newTodo = [
     }
 ]
 
-const index = newTodo.findIndex(function(todo, index){
-    return todo.title === 'Photoshop'
-})
-console.log(index);
+// const index = newTodo.findIndex(function(todo, index){
+//     return todo.title === 'Photoshop'
+// })
+// console.log(index);
+
+
+// method 1: how to redurn index of array object
+// const findTodo = function(newTodo, title){
+//     const index = newTodo.findIndex(function(todo, index){
+//         return todo.title.toLowerCase() === title.toLowerCase()
+//     })
+//     return newTodo[index];
+// }
+// let result = findTodo(newTodo,'PhoToshop')
+// console.log(result);
+
+
+// method 2: how to redurn index of array object
+const findTodo = function(newTodo, title){
+    const index = newTodo.find(function(todo, index){
+        return todo.title.toLowerCase() === title.toLowerCase()
+    })
+    return index;
+}
+let result = findTodo(newTodo,'PhoToshop')
+console.log(result);
+
+
+
