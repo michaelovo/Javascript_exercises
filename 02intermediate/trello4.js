@@ -1,0 +1,33 @@
+//Searching from arrays of objects
+
+const myTodo = [
+    "Buy rice",
+    "Code",
+    "Photoshop",
+    "Listen to Music",
+    "Play football"
+];
+
+//console.log(myTodo.indexOf('Code'));
+//console.log(myTodo[myTodo.indexOf('Code')]);
+
+// arrays with objects
+
+const newTodo = [
+    {
+        title: 'Write codes',
+        isDone: false,
+    }
+    , {
+        title: 'Photoshop',
+        isDone: false,
+    }, {
+        title: 'Play football',
+        isDone: true,
+    }
+]
+
+const index = newTodo.findIndex(function(todo, index){
+    return todo.title === 'Photoshop'
+})
+console.log(index);
